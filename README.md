@@ -1,70 +1,112 @@
-# Data Project Documentation Template
+# 📊 Freelancer Market Analysis
 
-A production-ready GitHub template for documenting data analysis, SQL, dashboard, pipeline, and machine learning projects - with built-in examples, narrative guidance, and adaptable structure.
+## 📖 Project Overview
+This project analyzes a global dataset of freelancers to uncover insights into earnings, performance, and market trends. 
 
-## What This Is
+The goal is to understand how factors such as experience, skill category, and client satisfaction influence freelancer income and success.
 
-This is a **cloneable template repository** designed to help data analysts, scientists, and engineers document their projects the way senior practitioners do - with clarity, structure, and storytelling.
+---
 
-Every section includes:
-- Plain-language instructions on what to write
-- Examples of strong vs. weak documentation  
-- Guidance on when to keep or delete a section
+## 🎯 Business Problem
+Freelancing platforms are highly competitive, and it is often unclear what drives higher earnings and better client outcomes.
 
-It works for **any kind of data project:**
-- SQL analysis
-- Python / R exploratory analysis
-- Dashboards (Tableau, Power BI, Looker)
-- Data pipelines / ETL workflows
-- Machine learning / predictive modeling
-- Mixed-method projects
+This project answers:
+- What factors influence freelancer earnings?
+- Which skills are most profitable?
+- Does experience significantly impact income?
+- How does client satisfaction relate to ratings?
 
-## Why This Exists
+---
 
-After hundreds of portfolio reviews, the pattern was clear: **the projects that stand out aren't always the most technically sophisticated - they're the ones where the README tells a clear story.**
+## 🛠️ Tools & Technologies
+- Python
+- Pandas
+- Excel (for initial exploration)
+- (Add Power BI or SQL here if you use them later)
 
-Most data professionals never learn how to document their work. This template fixes that.
+---
 
-## How to Use It
+## 📂 Dataset Description
+The dataset contains global freelancer data, including:
+- Freelancer ID
+- Job category / skill
+- Experience level
+- Hourly rate / earnings
+- Client satisfaction (%)
+- Ratings
+- Gender (cleaned)
 
-1. Click **"Use this template"** (green button at the top)
-2. Name your new repo after your actual project
-3. Copy the contents of `README_TEMPLATE.md` into your new project's README
-4. Delete folders and sections you don't need
-5. Remove all placeholder text and comments before publishing
+---
 
-Full walkthrough: [HOW_TO_USE.md](HOW_TO_USE.md)
+## 🧹 Data Cleaning Process
+The dataset required several preprocessing steps to ensure accuracy:
 
-## What's Inside
+- Removed duplicates to avoid skewed analysis  
+- Standardized text fields (e.g., gender: male/female → m/f)  
+- Converted `client_satisfaction` from percentage strings to numeric values  
+- Handled missing values using group-based imputation (median by rating)  
+- Corrected data types for numerical analysis  
 
-The template includes:
-- **README_TEMPLATE.md** - The fill-in-the-blank documentation template
-- **project_metadata.yml** - Optional machine-readable metadata
-- **Complete folder structure** - Pre-built folders for data, notebooks, scripts, queries, reports, visuals, and docs
-- **.gitignore** - Pre-configured to exclude data files
+These steps ensured the dataset was consistent and ready for analysis.
 
-## Who This Is For
+---
 
-- **Beginners** building their first portfolio project
-- **Early-career analysts** cleaning up existing projects
-- **Career switchers** who have technical skills but need to frame their work
-- **Experienced practitioners** who want a consistent structure
+## 🔍 Exploratory Data Analysis
+Key analysis performed includes:
 
-## Features
+- Distribution of freelancer earnings  
+- Relationship between experience level and hourly rate  
+- Comparison of earnings across different skill categories  
+- Analysis of client satisfaction vs ratings  
+- Identification of high-performing freelancer segments  
 
-✅ Section-by-section guidance with examples  
-✅ Supports SQL, Python, R, dashboards, pipelines, ML  
-✅ Includes ERD section for SQL projects  
-✅ Pre-built .gitignore for data projects  
-✅ Optional YAML metadata for portfolio automation  
-✅ Delete-what-you-don't-use philosophy  
+---
 
-## License
+## 📊 Key Insights
+- High-income skills dominate earnings across the platform  
+- Freelancers with more experience tend to earn higher hourly rates  
+- Strong correlation observed between ratings and client satisfaction  
+- Certain categories consistently outperform others in terms of income  
+- Data cleaning significantly improved reliability of insights  
 
-MIT License - use this however you want.
+---
 
-## Credits
+## ⚠️ Challenges & Solutions
+**Challenge:** Missing values in key columns like client satisfaction  
+**Solution:** Used group-based median imputation based on rating  
 
-Created by **Issy BI**
+**Challenge:** Inconsistent categorical data (e.g., gender variations)  
+**Solution:** Standardized values for consistency  
 
-If this helped you, consider starring the repo or sharing it with someone building their data portfolio.
+---
+
+## 📈 What I Learned
+- Importance of data cleaning before analysis  
+- How to handle missing data effectively  
+- Using Pandas for real-world data transformation  
+- Extracting meaningful insights from raw datasets  
+
+---
+
+## 🚀 Future Improvements
+- Add data visualizations (Matplotlib / Seaborn / Power BI)  
+- Perform deeper statistical analysis  
+- Build a dashboard for interactive insights  
+- Incorporate SQL for data querying  
+
+---
+
+## 📁 Project Structure
+```
+├── data/
+│   ├── raw_dataset.csv
+│   ├── cleaned_dataset.csv
+├── notebooks/
+│   ├── analysis.ipynb
+├── README.md
+```
+
+---
+
+## 📌 Conclusion
+This project demonstrates how raw freelancer data can be transformed into actionable insights through proper data cleaning and analysis. It highlights key drivers of success in the freelancing market and provides a foundation for further data exploration.
