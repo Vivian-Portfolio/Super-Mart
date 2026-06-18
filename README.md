@@ -51,7 +51,7 @@
 
 **Context:** Super Mart is a retail business selling products across multiple categories, channels, and cities. The business needs a clear view of its sales and profitability performance across 2021 and 2022.
 
-**Problem Statement:** The business had raw transaction data but no visual summary to track revenue, profit, top products or slaes trends across time, location, and channel.
+**Problem Statement:** The business had raw transaction data but no visual summary to track revenue, profit, top products or sales trends across time, location, and channel.
 
 **Approach:** Prepared the data in Excel using Power Query, where additional columns for Day, Month, and Year were extracted from the date field. Using Merge Queries, columns from the Master Data table were joined into the Input Date table using Product ID as the key. In Power BI, calculated columns were added for Total buying Value and Total Selling Value, Dax measures were created for Profit and Profit Percentage. An interactive dashbaord was built with KPIs cards, slicers and mulitple charts types to enable dynamic exploration of the data.
 
