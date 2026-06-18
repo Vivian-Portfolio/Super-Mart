@@ -57,7 +57,7 @@
 | **In Scope** | Two years of Super Mart transaction data (2021 - 2022), covering sales volume, revenue, profit, product categories, sale types, and payment modes |
 | **Out of Scope** | Customers demographics data and individual customer profiles - these were available in the dataset |
 | **Time Period** | January 2021 - Decemeber 2022 |
-| **Granularity** | Row-level transaction data (one row per sale transaction |
+| **Granularity** | Row-level transaction data (one row per sale transaction) |
 
 ### Tools & Technologies
 
