@@ -49,7 +49,7 @@
   (Too vague. Could describe 10,000 projects. Describes none of them.)
 -->
 
-**Context:** Super Mart is a retail business selling products across multiple categories, channels, and cities. The business needs a clear view of its sales and profitability performance across 2021 and 2002.
+**Context:** Super Mart is a retail business selling products across multiple categories, channels, and cities. The business needs a clear view of its sales and profitability performance across 2021 and 2022.
 
 **Problem Statement:** The business had raw transaction data but no visual summary to track revenue, profit, top products or slaes trends across time, location, and channel.
 
