@@ -1,4 +1,4 @@
-# [Project Title]
+# Super Mart Sales Analysis
 > *One sentence. What did you analyze, build, or solve - and why does it matter?*
 
 ---
@@ -6,11 +6,8 @@
 ## ⚙️ Project Type Flags
 > *Check what applies. This helps reviewers and collaborators understand the nature of the work at a glance. Delete this block before publishing.*
 
-- [ ] Exploratory Data Analysis (EDA)
-- [ ] SQL Analysis / Querying
 - [ ] Dashboard / Data Visualization
-- [ ] Data Pipeline / ETL
-- [ ] Predictive Modelling / Machine Learning
+- [ ] Predictive Modelling / M
 - [ ] Data Cleaning / Wrangling
 - [ ] End-to-End (multiple of the above)
 - [ ] Other: ___________
@@ -23,8 +20,8 @@
 3. [Project Scope & Tools](#3-project-scope--tools)
 4. [Repository Structure](#4-repository-structure)
 5. [Data Workflow](#5-data-workflow)
-6. [Data Model & Schema](#6-data-model--schema)
-7. [ERD - Entity Relationship Diagram](#7-erd--entity-relationship-diagram) *(SQL projects)*
+6. 
+7. 
 8. [Analysis & Metrics](#8-analysis--metrics)
 9. [Key Insights](#9-key-insights)
 10. [Recommendations](#10-recommendations)
@@ -126,7 +123,6 @@
 
 | Category | Tool(s) Used |
 |----------|-------------|
-| Data Storage | [e.g., PostgreSQL, CSV files, BigQuery, S3] |
 | Data Processing | [e.g., Python, R, SQL, Excel, dbt] |
 | Analysis | [e.g., pandas, dplyr, custom SQL queries] |
 | Visualization | [e.g., Matplotlib, Tableau, Power BI, Looker] |
@@ -138,31 +134,6 @@
 
 ## 4. Repository Structure
 
-```
-[project-root]/
-│
-├── data/
-│   ├── raw/                  # Original, unmodified source data - never edited
-│   ├── processed/            # Cleaned and transformed data
-│   └── external/             # Reference data, lookup tables, third-party files
-│
-├── notebooks/                # Jupyter, R Markdown, or Colab notebooks
-│
-├── scripts/                  # Reusable .py, .R, or .sh processing files
-│
-├── queries/                  # SQL files (retain this folder for SQL-heavy projects)
-│   ├── exploratory/          # Ad-hoc or investigative queries
-│   ├── transformations/      # Cleaning and reshaping logic
-│   └── final/                # Production-ready or presentation queries
-│
-├── reports/                  # Final outputs: PDFs, slide decks, Word docs
-│
-├── visuals/                  # Exported charts, dashboard screenshots, ERD diagrams
-│
-├── docs/                     # Data dictionaries, schema notes, reference material
-│
-├── project_metadata.yml      # Machine-readable metadata (optional)
-└── README.md                 # You are here
 ```
 
 > ⚠️ *Delete folders you didn't use. An empty folder is worse than no folder.*
@@ -215,24 +186,9 @@
 
 ---
 
-## 6. Data Model & Schema
-
-<!--
-  Define your fields so that someone reading your analysis can follow along
-  without digging through your code.
-
-  WHAT GOOD LOOKS LIKE (one row example):
-  | transaction_id | string | Unique identifier per sales transaction | TXN-00482 |
-  | return_flag    | boolean | Whether the transaction included a return | TRUE |
-  | region_code    | string | Two-letter identifier for store region | "NE" |
-
   WHAT TO AVOID:
   ❌ Skipping this section because "the field names are self-explanatory."
      They're not. Not to a reviewer. Not to you in six months.
-
-  📌 FOR SQL PROJECTS: If you have multiple tables, create one block per table.
-     Describe join keys and relationships here. Your ERD (Section 7) will
-     visualise what this section describes in text.
 
   📌 FOR NON-SQL PROJECTS: Describe the shape of your dataset informally
      if a formal schema doesn't apply. Even one paragraph is more helpful than nothing.
@@ -254,28 +210,7 @@
 
 ---
 
-## 7. ERD - Entity Relationship Diagram
-### *(Primarily for SQL Projects - remove this section if not applicable)*
-
 <!--
-  An ERD shows how your tables connect to each other visually.
-  It is the fastest way for a reviewer to understand the data structure
-  of a SQL project without reading every query.
-
-  HOW TO INCLUDE YOUR ERD:
-  Option A - Image embed (most common):
-    Export your ERD from dbdiagram.io, DBeaver, Lucidchart, or similar.
-    Save to /visuals/erd.png and reference it below.
-
-  Option B - dbdiagram.io code block (version-controllable):
-    Paste your schema definition code directly in the fenced block below.
-    Anyone can paste it into dbdiagram.io to regenerate the visual.
-
-  Option C - Mermaid diagram (renders natively in GitHub):
-    Use the mermaid code block syntax below.
-    GitHub will render this as a diagram automatically.
-
-  PICK ONE. Don't use all three. Delete the options you don't use.
 -->
 
 ### Option A - Embedded Image
@@ -309,30 +244,6 @@ Table products {
 *Paste this into [dbdiagram.io](https://dbdiagram.io) to view the visual.*
 
 ---
-
-### Option C - Mermaid Diagram *(renders on GitHub)*
-```mermaid
-erDiagram
-    ORDERS {
-        int order_id PK
-        int customer_id FK
-        int product_id FK
-        date order_date
-        float amount
-    }
-    CUSTOMERS {
-        int customer_id PK
-        string region_code
-        date signup_date
-    }
-    PRODUCTS {
-        int product_id PK
-        string category
-        float unit_price
-    }
-    ORDERS ||--o{ CUSTOMERS : "placed by"
-    ORDERS ||--o{ PRODUCTS : "contains"
-```
 
 ---
 
