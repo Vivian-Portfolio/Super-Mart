@@ -77,10 +77,10 @@
   (These can't fail - which means they can't succeed either.)
 -->
 
-- **Primary Objective:** [The main thing you set out to do]
-- **Secondary Objective 1:** [Supporting goal]
-- **Secondary Objective 2:** [Supporting goal]
-- **Secondary Objective 3:** [Remove if not applicable]
+- **Primary Objective:** Build an interactive Power BI sales dashboard to visulaize Super Mart's revenue, profit, and product performance across 2012 and 2022.
+- **Secondary Objective 1:** Identify the top-performing products and categories by total sales value. 
+- **Secondary Objective 2:** Detemine monthly and daily sales trends to uncover peak and low performance periods.
+- **Secondary Objective 3:** Compare sales performance across sales types (online, Direct Sales, Wholsaler) and payment mode (Cash, Online).
 
 > 💡 *Every analysis decision in this project traces back to one of these objectives.*
 
