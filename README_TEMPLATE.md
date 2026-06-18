@@ -1,14 +1,14 @@
 # Super Mart Sales Analysis
-> *One sentence. What did you analyze, build, or solve - and why does it matter?*
+> *Built an interactive Power BI sales dashboard analyzing two years of Super Mart transactions to uncover revenue trends, top products, and profitability insights*
 
 ---
 
 ## ⚙️ Project Type Flags
 > *Check what applies. This helps reviewers and collaborators understand the nature of the work at a glance. Delete this block before publishing.*
 
-- [ ] Dashboard / Data Visualization
-- [ ] Predictive Modelling / M
-- [ ] Data Cleaning / Wrangling
+- [x] Dashboard / Data Visualization
+- [ ] Predictive Modelling 
+- [x] Data Cleaning / Wrangling
 - [ ] End-to-End (multiple of the above)
 - [ ] Other: ___________
 
@@ -19,16 +19,12 @@
 2. [Objectives](#2-objectives)
 3. [Project Scope & Tools](#3-project-scope--tools)
 4. [Repository Structure](#4-repository-structure)
-5. [Data Workflow](#5-data-workflow)
-6. 
-7. 
-8. [Analysis & Metrics](#8-analysis--metrics)
-9. [Key Insights](#9-key-insights)
-10. [Recommendations](#10-recommendations)
-11. [Assumptions & Limitations](#11-assumptions--limitations)
-12. [Future Enhancements](#12-future-enhancements)
-13. [Deliverables](#13-deliverables)
-14. [Author](#14-author)
+5. [Data Preparation](#5-data-preparation)
+6. [Analysis & Metrics](#8-analysis--metrics)
+7. [Key Insights](#9-key-insights)
+8. [Recommendations](#10-recommendations)
+9. [Deliverables](#13-deliverables)
+10. [Author](#14-author)
 
 ---
 
@@ -53,13 +49,13 @@
   (Too vague. Could describe 10,000 projects. Describes none of them.)
 -->
 
-**Context:** [The business, research, or personal situation that motivated this project.]
+**Context:** Super Mart is a retail business selling products across multiple categories, channels, and cities. The business needs a clear view of its sales and profitability performance across 2021 and 2002.
 
-**Problem Statement:** [The specific question or challenge you were addressing.]
+**Problem Statement:** The business had raw transaction data but no visual summary to track revenue, profit, top products or slaes trends across time, location, and channel.
 
-**Approach:** [In 1–2 sentences - how did you tackle it?]
+**Approach:** Prepared the data in Excel using Power Query, where i additional columns for Day, Month, and Year were extracted from the date field. Uisng Merge Queries, columns from the Master Data table were joined into the Input Date table using product ID as the key. In Power BI, calculated columns were added for Total buying Value and Total Selling Value, Dax measures were created for Profit and Profit Percentage. An interactive dashbaord was built with KPIs cards, slicers and mulitple charts types to enable dynamic exploration of the data.
 
-**Outcome:** [What did you produce or discover?]
+**Outcome:** Delivered a fully interactive Sales Dashboard revealing Total Sales of 401k, Total Profit of 69k, a 21% profit margin, Product41 as the top product, and clear monthly, daily and category-level sales patterns.
 
 ---
 
