@@ -29,8 +29,6 @@
 
 ## 1. Project Overview
 
--->
-
 **Context:** Super Mart is a retail business selling products across multiple categories, channels, and cities. The business needs a clear view of its sales and profitability performance across 2021 and 2022.
 
 **Problem Statement:** The business had raw transaction data but no visual summary to track revenue, profit, top products or sales trends across time, location, and channel.
