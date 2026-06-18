@@ -74,28 +74,12 @@
 
 ## 4. Repository Structure
 
-```
-
-> ⚠️ *Delete folders you didn't use. An empty folder is worse than no folder.*
-> SQL-heavy projects: keep `queries/`. Analysis-only projects: keep `notebooks/`. Both? Keep both.
-
----
 
 ## 5. Data Workflow
 
-<!--
-  Show how data moved through your project - from source to output.
-  Every transformation decision should be traceable here.
-
-  WHAT GOOD LOOKS LIKE:
-  1. Source: "Monthly CSV exports pulled from the internal POS system.
-              Five files, one per region, covering Jan 2023–Jun 2024."
-  2. Ingestion: "Loaded into Python using pandas. Files concatenated into
-                 a single dataframe (approx. 340,000 rows)."
-  3. Cleaning: "Removed 1.2% of rows with null transaction IDs.
-                Standardised date formats across regional files.
-                Resolved product category naming inconsistencies (3 variants → 1)."
-  4. Transformation: "Created a returns_rate field at product-category level.
+  1. Source: 
+  2. Ingestion: 
+  3. Transformation: "Created a returns_rate field at product-category level.
                       Aggregated to weekly and regional grain for trend analysis."
   5. Analysis: "Descriptive statistics, regional comparison, return rate
                 segmentation by product category."
@@ -117,12 +101,12 @@
 [Output / Visualisation / Reporting]
 ```
 
-1. **Source:** [Where did the data come from? Format, size, access method.]
-2. **Ingestion:** [How was it brought in?]
-3. **Cleaning:** [What issues did you find and fix?]
-4. **Transformation:** [What new fields, aggregations, or structures did you create?]
-5. **Analysis:** [What methods - statistical, visual, query-based, model-based?]
-6. **Output:** [What form do the results take?]
+1. **Source:** Two Excel tables - Input Data (transaction records) and Master Data (product reference list). Data covers January 2021 - December 2022.
+2. **Ingestion:** Both tables loaded into Excel, Input Data contains individuals sales transactions. Master Data contains products details including category, unit of measure, buying                         price, and selling  price.
+3. **Transformation:** Using Power Query, additional columns were extracted from the data field - Day, Month, and Year - to enable time-based analysis. Merge Queries was used to join                              Master Data columns into the input Data tables using Product ID as the common key.
+4. **Modeling:** In Power BI, two calculated columns were added - Total Buying Value and Total Selling Value. Two Dax measures were then created - Profit (Total Selling Value minus Total                    Buying Value) and Profit Percentage (Profit divided by Total Selling Value Mutiplied by 100).
+5. **Analysis:** Sales performance was analyzed across time periods, product categories, sale types, payment modes, and individual products using interactive slicers and visualizations.
+6. **Output:** Interactive Power BI dashboard, written summary report (Word document), and project documentation uploaded to GitHub.
 
 ---
 
