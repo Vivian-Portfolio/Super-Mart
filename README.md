@@ -53,7 +53,7 @@
 
 **Problem Statement:** The business had raw transaction data but no visual summary to track revenue, profit, top products or slaes trends across time, location, and channel.
 
-**Approach:** Prepared the data in Excel using Power Query, where additional columns for Day, Month, and Year were extracted from the date field. Uisng Merge Queries, columns from the Master Data table were joined into the Input Date table using product ID as the key. In Power BI, calculated columns were added for Total buying Value and Total Selling Value, Dax measures were created for Profit and Profit Percentage. An interactive dashbaord was built with KPIs cards, slicers and mulitple charts types to enable dynamic exploration of the data.
+**Approach:** Prepared the data in Excel using Power Query, where additional columns for Day, Month, and Year were extracted from the date field. Using Merge Queries, columns from the Master Data table were joined into the Input Date table using product ID as the key. In Power BI, calculated columns were added for Total buying Value and Total Selling Value, Dax measures were created for Profit and Profit Percentage. An interactive dashbaord was built with KPIs cards, slicers and mulitple charts types to enable dynamic exploration of the data.
 
 **Outcome:** Delivered a fully interactive Sales Dashboard revealing Total Sales of 401k, Total Profit of 69k, a 21% profit margin, Product41 as the top product, and clear monthly, daily and category-level sales patterns.
 
