@@ -4,7 +4,6 @@
 ---
 
 ## ⚙️ Project Type Flags
-> *Check what applies. This helps reviewers and collaborators understand the nature of the work at a glance. Delete this block before publishing.*
 
 - [x] Dashboard / Data Visualization
 - [ ] Predictive Modelling 
@@ -30,23 +29,6 @@
 
 ## 1. Project Overview
 
-<!--
-  Write 3–5 sentences in plain language.
-  Cover: context → problem → approach → outcome.
-  Read it out loud. If it sounds like a form - rewrite it.
-
-  WHAT GOOD LOOKS LIKE:
-  "A mid-size retail business was seeing inconsistent revenue across
-  its regional stores but couldn't identify the root cause. This project
-  explored 18 months of transaction data across five regions to determine
-  whether underperformance was driven by sales volume, pricing, or return
-  rates. The analysis revealed that one region's gap was almost entirely
-  explained by an unusually high return rate on a single product category -
-  a finding invisible in the company's top-level reporting."
-
-  WHAT TO AVOID:
-  "This project analyzes sales data to find trends and insights."
-  (Too vague. Could describe 10,000 projects. Describes none of them.)
 -->
 
 **Context:** Super Mart is a retail business selling products across multiple categories, channels, and cities. The business needs a clear view of its sales and profitability performance across 2021 and 2022.
@@ -61,28 +43,10 @@
 
 ## 2. Objectives
 
-<!--
-  Write objectives that are specific enough to succeed or fail.
-  Use action-oriented verbs: Identify, Determine, Quantify, Build, Evaluate.
-
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Determine whether customer churn rate correlates with support ticket volume."
-  ✅ "Identify the top three revenue-driving product categories across all regions."
-  ✅ "Build a reproducible pipeline that ingests and cleans daily sales exports."
-
-  WHAT TO AVOID:
-  ❌ "Explore the data."
-  ❌ "Gain insights."
-  ❌ "Understand trends."
-  (These can't fail - which means they can't succeed either.)
--->
-
 - **Primary Objective:** Build an interactive Power BI sales dashboard to visualize Super Mart's revenue, profit, and product performance across 2012 and 2022.
 - **Secondary Objective 1:** Identify the top-performing products and categories by total sales value. 
 - **Secondary Objective 2:** Detemine monthly and daily sales trends to uncover peak and low performance periods.
 - **Secondary Objective 3:** Compare sales performance across sales types (Online, Direct Sales, Wholesaler) and payment mode (Cash, Online).
-
-> 💡 *Every analysis decision in this project traces back to one of these objectives.*
 
 ---
 
