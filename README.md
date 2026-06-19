@@ -73,7 +73,7 @@
 ---
 
 ## 4. Repository Structure
-
+```
 [Super-Mart]/
 │
 ├── data/
@@ -87,7 +87,7 @@
 │
 ├── README.md   # You are here
 └── project_metadata.yml  # Project metadata
-
+```
 
 ## 5. Data Workflow
 
