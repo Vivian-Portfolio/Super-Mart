@@ -74,32 +74,33 @@
 
 ## 4. Repository Structure
 
+[project-root]/
+│
+├── data/
+│   ├── raw/                  # Original, unmodified source data - never edited
+│   ├── processed/            # Cleaned and transformed data
+│   └── external/             # Reference data, lookup tables, third-party files
+│
+├── notebooks/                # Jupyter, R Markdown, or Colab notebooks
+│
+├── scripts/                  # Reusable .py, .R, or .sh processing files
+│
+├── queries/                  # SQL files (retain this folder for SQL-heavy projects)
+│   ├── exploratory/          # Ad-hoc or investigative queries
+│   ├── transformations/      # Cleaning and reshaping logic
+│   └── final/                # Production-ready or presentation queries
+│
+├── reports/                  # Final outputs: PDFs, slide decks, Word docs
+│
+├── visuals/                  # Exported charts, dashboard screenshots, ERD diagrams
+│
+├── docs/                     # Data dictionaries, schema notes, reference material
+│
+├── project_metadata.yml      # Machine-readable metadata (optional)
+└── README.md                 # You are here
+⚠️ Delete folders you didn't use. An empty folder is worse than no folder. SQL-heavy projects: keep queries/. Analysis-only projects: keep notebooks/. Both? Keep both.
 
 ## 5. Data Workflow
-
-  1. Source: 
-  2. Ingestion: 
-  3. Transformation: "Created a returns_rate field at product-category level.
-                      Aggregated to weekly and regional grain for trend analysis."
-  5. Analysis: "Descriptive statistics, regional comparison, return rate
-                segmentation by product category."
-  6. Output: "Summary report (PDF), annotated notebook, processed CSV."
-
-  WHAT TO AVOID:
-  ❌ "Data was cleaned and analysed." (No chain. No decisions. No trust.)
--->
-
-```
-[Data Source(s)]
-      ↓
-[Ingestion / Collection Method]
-      ↓
-[Cleaning & Transformation]
-      ↓
-[Analysis / Modelling / Querying]
-      ↓
-[Output / Visualisation / Reporting]
-```
 
 1. **Source:** Two Excel tables - Input Data (transaction records) and Master Data (product reference list). Data covers January 2021 - December 2022.
 2. **Ingestion:** Both tables loaded into Excel, Input Data contains individuals sales transactions. Master Data contains products details including category, unit of measure, buying                         price, and selling  price.
@@ -108,66 +109,39 @@
 5. **Analysis:** Sales performance was analyzed across time periods, product categories, sale types, payment modes, and individual products using interactive slicers and visualizations.
 6. **Output:** Interactive Power BI dashboard, written summary report (Word document), and project documentation uploaded to GitHub.
 
----
-
-  WHAT TO AVOID:
-  ❌ Skipping this section because "the field names are self-explanatory."
-     They're not. Not to a reviewer. Not to you in six months.
-
-  📌 FOR NON-SQL PROJECTS: Describe the shape of your dataset informally
-     if a formal schema doesn't apply. Even one paragraph is more helpful than nothing.
--->
-
-### Dataset / Table: `[name]`
+### Dataset / Table: `Input Data`
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| `[field_1]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
-| `[field_2]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
-| `[field_3]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
+| `Date` | Date| Date of the sales transaction | 01/01/2021 |
+| `Product ID` | String | Unique identifier for each product | P0024 |
+| `Quantity` |Integer | Number of units sold per transaction| 9 |
+| `Sale Type` | String | Channel of sale | Direct Sales |
+| `[Payment Mode` | String | Method of payment used  | Online |
+| `Discount %` | Float | Discount applied to the transaction  | 0.0% |
+| `Day` | Integer| Day extracted from date (Power Query)| 1 |
+| `Month` | String |  Month extracted from date (Power Query)  |  January  |
+| `Year` | Integer  | Year extracted from date (Power Query)  | 2021 |
 
-> **Row count (approx.):** [X rows]
-> **Date range:** [Start] – [End]
-> **Key join / relationship:** [e.g., `orders.customer_id` → `customers.id`]
-
-*Add additional table blocks as needed for multi-table projects.*
-
----
-
-<!--
--->
-
-### Option A - Embedded Image
-![ERD Diagram](visuals/erd.png)
-*[Brief caption: e.g., "Three-table schema - orders, customers, and products joined on shared IDs."]*
+> **Row count (approx.):** Multiple transaction records across 2021–2022
+> **Date range:**January 2021 – December 2022
+> **Key join / relationship:** `Input Data.Product ID ` → `Master Data.Product ID`
 
 ---
 
-### Option B - dbdiagram.io Schema Definition
-```
-Table orders {
-  order_id    int     [pk]
-  customer_id int     [ref: > customers.customer_id]
-  product_id  int     [ref: > products.product_id]
-  order_date  date
-  amount      float
-}
+### Dataset / Table: `Master Data`
 
-Table customers {
-  customer_id int  [pk]
-  region_code string
-  signup_date date
-}
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `Product ID ` | String | Unique identifier for each product  | P0015 |
+| `Product` | String | Product name |  Product15  |
+| `Category` | String  |Product category grouping|  Category02  |
+| `UOM` | String | Unit of measure | Ft|
+| `Buying Price` |  Float | Cost price per unit | 12 |
+| `Selling Price` | Float | Selling price per unit | 15.72 |
 
-Table products {
-  product_id   int    [pk]
-  category     string
-  unit_price   float
-}
-```
-*Paste this into [dbdiagram.io](https://dbdiagram.io) to view the visual.*
-
----
+> **Row count (approx.):** 46 product records
+> **Key join / relationship:** `Master Data.Product ID` → `Input Data.Product ID`
 
 ---
 
@@ -175,30 +149,27 @@ Table products {
 
 | Relationship | Join Key | Type |
 |-------------|----------|------|
-| `orders` → `customers` | `customer_id` | Many-to-One |
-| `orders` → `products` | `product_id` | Many-to-One |
-| [Add rows as needed] | | |
+| `Input Data` → `Master Data` | `Product ID` | `Many-to-One` |
 
 ---
 
 ## 8. Analysis & Metrics
 
+### Analytical Approach
+
+| Metric | Definition | Why It Matters |
+|--------|-----------|----------------|
+| `Total Sales` | Sum of Total Selling Value across all transactions | Measures overall revenue generated by Super Mart |
+| `Total Profit` | Total Selling Value minus Total Buying Value | Shows how much the business earns after product costs |
+| `Profit %` | Profit divided by Total Selling Value multiplied by 100 | Measures profitability as a percentage of revenue |
+|` Top Product` | Product with the highest total sales value | Identifies the single most valuable product in the catalogue |
+| `Top Category` | Category with the highest total sales value | Identifies the strongest performing product group |
+| `Monthly Sales Trend` | Sum of Total Selling Value grouped by month | Reveals seasonal patterns and peak trading periods |
+| `Daily Sales Trend` | Sum of Total Selling Value grouped by day | Shows within-month fluctuations in purchasing behaviour |
+| `Sales by Channel` | Total sales split by sale type (Online, Direct Sales, Wholesaler) | Compares revenue contribution across selling channels |
+| `Sales by Payment Mode` | Total sales split by payment method (Cash, Online) | Reveals customer payment preferences |
+
 <!--
-  Explain what you measured and how - before you share what you found.
-
-  WHAT GOOD LOOKS LIKE:
-  Metric: "Customer Return Rate"
-  Definition: "Number of transactions flagged as returns divided by total
-               transactions, calculated at product-category and regional grain."
-  Why It Matters: "Return rate - not sales volume - was hypothesised to
-                  explain regional revenue gaps. This metric tests that hypothesis."
-
-  WHAT TO AVOID:
-  ❌ Defining a metric only in code: SUM(returns) / COUNT(transaction_id)
-     That's an implementation. Write the plain-language definition here.
-     Both belong in your project - the definition in the README,
-     the implementation in the code.
--->
 
 ### Analytical Approach
 
