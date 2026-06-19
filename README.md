@@ -21,11 +21,11 @@
 3. [Project Scope & Tools](#3-project-scope--tools)
 4. [Repository Structure](#4-repository-structure)
 5. [Data Preparation](#5-data-preparation)
-6. [Analysis & Metrics](#8-analysis--metrics)
-7. [Key Insights](#9-key-insights)
-8. [Recommendations](#10-recommendations)
-9. [Deliverables](#13-deliverables)
-10. [Author](#14-author)
+6. [Analysis & Metrics](#6-analysis--metrics)
+7. [Key Insights](#7-key-insights)
+8. [Recommendations](#8-recommendations)
+9. [Deliverables](#9-deliverables)
+10. [Author](#10-author)
 
 ---
 
