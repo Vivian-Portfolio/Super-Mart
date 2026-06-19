@@ -1,4 +1,4 @@
-# Super Mart Sales Analysis
+   # Super Mart Sales Analysis
 > *Built an interactive Power BI sales dashboard analyzing two years of Super Mart transactions to uncover revenue trends, top products, and profitability insights*
 
 ---
