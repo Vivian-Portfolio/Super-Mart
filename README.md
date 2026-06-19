@@ -83,10 +83,10 @@
 |
 ├── reports/                # Final deliverables: Word report
 │
-├── visuals/                #Dashboard screenshots and charts 
+├── visuals/                # Dashboard screenshots and charts 
 │
-├── README.md   # You are here
-└── project_metadata.yml  # Project metadata
+├── README.md               # You are here
+└── project_metadata.yml    # Project metadata
 ```
 
 ## 5. Data Workflow
