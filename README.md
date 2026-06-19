@@ -156,7 +156,7 @@
 
 ### Methods Used
 
-- Descriptive statistics — total sales, profit, and profit margin across the full dataset
+- Descriptive statistics - total sales, profit, and profit margin across the full dataset
 - Trend analysis across months and days to identify peak and low trading periods
 - Segmentation and group comparison by product, category, sale type, and payment mode
 - Custom aggregation using DAX measures in Power BI (Profit and Profit %)
@@ -166,17 +166,17 @@
 
 ## 9. Key Insights
 
-1. *Total Sales reached 401K with a 21% profit margin* — meaning Super Mart retains approximately ₦1 in every ₦5 of revenue generated, after product costs.
+1. *Total Sales reached 401K with a 21% profit margin* - meaning Super Mart retains approximately ₦1 in every ₦5 of revenue generated, after product costs.
 
-2. *Product41 is the single top-performing product* with 23K in sales value — significantly ahead of other products, making it the most critical item for stock availability.
+2. *Product41 is the single top-performing product* with 23K in sales value - significantly ahead of other products, making it the most critical item for stock availability.
 
 3. *January recorded the highest monthly sales*, peaking near 50K, suggesting a strong start-of-year trading period that could be leveraged for future promotions.
 
-4. *Daily sales show recurring peaks around the 10th, 20th, and 30th of each month* — likely aligned with salary payment cycles or restocking patterns.
+4. *Daily sales show recurring peaks around the 10th, 20th, and 30th of each month* - likely aligned with salary payment cycles or restocking patterns.
 
 5. *Online and Direct Sales dominate the sales channel mix*, together accounting for over 85% of transactions, with Wholesaler contributing a smaller share.
 
-6. *Payment is evenly split between Cash and Online (50/50)* — indicating customers have no strong preference for one payment method over the other.
+6. *Payment is evenly split between Cash and Online (50/50)* - indicating customers have no strong preference for one payment method over the other.
 
 7. *Category04 and Category02 are the top two performing categories*, together making up the majority of category-level revenue.
 
@@ -186,27 +186,27 @@
 
 | Priority | Recommendation | Based On | Suggested Owner |
 |----------|---------------|----------|-----------------|
-| High | Prioritize stock availability for Product41 and the top 5 products year-round to prevent lost sales from stockouts | Insight 2 — Product41 is the single top-performing product at    23K in sales value | Inventory / Procurement team |
-| High | Plan targeted promotions and increased stock levels ahead of January, which consistently records the highest monthly sales | Insight 3 — January peaked near 50K, the strongest       month of the year | Sales / Marketing team |
-| Medium | Schedule restocking and staffing around the 10th, 20th, and 30th of each month to meet recurring demand peaks | Insight 4 — Daily sales show consistent peaks around these dates | Operations team |
-| Medium | Investigate whether the Wholesaler channel can be expanded, given that Online and Direct Sales currently dominate over 85% of transactions | Insight 5 — Wholesaler contributes a   smaller share of total transactions | Sales / Business Development team |
-| Low | Introduce category-level targets for Category04 and Category02 to sustain their leading performance and identify growth opportunities | Insight 7 — These two categories together      make up the majority of category revenue | Category Management team |
+| High | Prioritize stock availability for Product41 and the top 5 products year-round to prevent lost sales from stockouts | Insight 2 - Product41 is the single top-performing product at    23K in sales value | Inventory / Procurement team |
+| High | Plan targeted promotions and increased stock levels ahead of January, which consistently records the highest monthly sales | Insight 3 - January peaked near 50K, the strongest       month of the year | Sales / Marketing team |
+| Medium | Schedule restocking and staffing around the 10th, 20th, and 30th of each month to meet recurring demand peaks | Insight 4 - Daily sales show consistent peaks around these dates | Operations team |
+| Medium | Investigate whether the Wholesaler channel can be expanded, given that Online and Direct Sales currently dominate over 85% of transactions | Insight 5 - Wholesaler contributes a   smaller share of total transactions | Sales / Business Development team |
+| Low | Introduce category-level targets for Category04 and Category02 to sustain their leading performance and identify growth opportunities | Insight 7 -  These two categories together      make up the majority of category revenue | Category Management team |
 ---
 
 ## 11. Assumptions & Limitations
 
 ### Assumptions
 - All transaction records in the Input Data table were assumed to be complete and accurate — no validation was performed against an external source
-- Product prices in the Master Data table were assumed to be fixed across the entire 2021–2022 period — price changes over time were not accounted for
-- Discount % was 0.0% across all visible records — it was assumed discounts were not applied during this period
+- Product prices in the Master Data table were assumed to be fixed across the entire 2021–2022 period - price changes over time were not accounted for
+- Discount % was 0.0% across all visible records - it was assumed discounts were not applied during this period
 
 ### Limitations
-- The dataset does not include customer information — therefore no analysis of customer behaviour, repeat purchases, or customer segmentation was possible
-- Product and category names are generic (Product41, Category02) — real product names were not available, limiting business-specific interpretation of findings
-- No regional or store-level data was available — all analysis is at the overall business level only
-- The data covers only 2021–2022 — longer-term trends beyond this period cannot be determined
+- The dataset does not include customer information - therefore no analysis of customer behaviour, repeat purchases, or customer segmentation was possible
+- Product and category names are generic (Product41, Category02) - real product names were not available, limiting business-specific interpretation of findings
+- No regional or store-level data was available - all analysis is at the overall business level only
+- The data covers only 2021–2022 - longer-term trends beyond this period cannot be determined
 
-> The goal here is pre-emptive Q&A. A thoughtful reviewer might ask: "Did you account for price changes?" — this section answers before they ask.
+> The goal here is pre-emptive Q&A. A thoughtful reviewer might ask: "Did you account for price changes?" - this section answers before they ask.
 
 ---
 
