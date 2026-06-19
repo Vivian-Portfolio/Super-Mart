@@ -196,7 +196,7 @@
 ## 11. Assumptions & Limitations
 
 ### Assumptions
-- All transaction records in the Input Data table were assumed to be complete and accurate — no validation was performed against an external source
+- All transaction records in the Input Data table were assumed to be complete and accurate - no validation was performed against an external source
 - Product prices in the Master Data table were assumed to be fixed across the entire 2021–2022 period - price changes over time were not accounted for
 - Discount % was 0.0% across all visible records - it was assumed discounts were not applied during this period
 
