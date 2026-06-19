@@ -4,9 +4,11 @@
 ---
 
 ## ⚙️ Project Type Flags
-
+- [ ] Exploratory Data Analysis (EDA)
+- [ ] SQL Analysis / Querying
 - [x] Dashboard / Data Visualization
-- [ ] Predictive Modelling 
+- [ ] Data Pipeline / ETL
+- [ ] Predictive Modelling / Machine Learning
 - [x] Data Cleaning / Wrangling
 - [ ] End-to-End (multiple of the above)
 - [ ] Other: ___________
