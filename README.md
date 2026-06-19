@@ -109,7 +109,7 @@
 5. **Analysis:** Sales performance was analyzed across time periods, product categories, sale types, payment modes, and individual products using interactive slicers and visualizations.
 6. **Output:** Interactive Power BI dashboard, written summary report (Word document), and project documentation uploaded to GitHub.
 
-### Dataset / Table: `Input Data`
+### Dataset / Table: Input Data
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
