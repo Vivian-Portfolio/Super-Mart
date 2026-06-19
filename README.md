@@ -80,6 +80,7 @@
 │  └──raw/                  # Original, unmodified source data 
 │ 
 ├── docs/                   # Data dictionaries and project notes
+|
 ├── reports/                # Final deliverables: Word report
 │
 ├── visuals/                #Dashboard screenshots and charts 
