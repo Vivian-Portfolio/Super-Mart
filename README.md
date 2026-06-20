@@ -21,11 +21,13 @@
 3. [Project Scope & Tools](#3-project-scope--tools)
 4. [Repository Structure](#4-repository-structure)
 5. [Data Preparation](#5-data-preparation)
-6. [Analysis & Metrics](#6-analysis--metrics)
-7. [Recommendations](#7-recommendations)
+6. [Data Model & Schema](#6-data-model--schema)
+7. [Analysis & Metrics](#7-analysis--metrics)
 8. [Key Insights](#8-key-insights)
-9. [Deliverables](#9-deliverables)
-10. [Author](#10-author)
+9. [Recommendations](#9-recommendations)
+10. [Deliverables](#10-deliverables)
+11. [Assumptions & Limitations](#11-assumptions--limitations)
+12. [Author](#12-author)
 
 ---
 
@@ -90,7 +92,7 @@
 └── project_metadata.yml    # Project metadata
 ```
 
-## 5. Data Workflow
+## 5. Data Preparation
 
 1. **Source:** Two Excel tables - Input Data (transaction records) and Master Data (product reference list). Data covers January 2021 - December 2022.
 2. **Ingestion:** Both tables loaded into Excel, Input Data contains individuals sales transactions. Master Data contains products details including category, unit of measure, buying                         price, and selling  price.
@@ -100,7 +102,7 @@
 6. **Output:** Interactive Power BI dashboard, written summary report (Word document), and project documentation uploaded to GitHub.
 
 ---
-## 6.  Data Descripition 
+## 6.  Data Model & Schema
 
 ### Dataset / Table: Input Data
 
@@ -119,7 +121,7 @@
 > **Row count (approx.):** Multiple transaction records across 2021–2022
 > **Date range:**January 2021 – December 2022
 > **Key join / relationship:** `Input Data.Product ID ` → `Master Data.Product ID`
-
+---
 ### Dataset / Table: Master Data
 
 | Field Name | Data Type | Description | Example Value |
@@ -144,7 +146,7 @@
 
 ---
 
-## 8. Analysis & Metrics
+## 7. Analysis & Metrics
 
 ### Analytical Approach
 
@@ -166,25 +168,25 @@
 
 ---
 
-## 9. Key Insights
+## 8. Key Insights
 
-1. *Total Sales reached 401K with a 21% profit margin* - meaning Super Mart retains approximately ₦1 in every ₦5 of revenue generated, after product costs.
+1. **Total Sales reached 401K with a 21% profit margin** - meaning Super Mart retains approximately ₦1 in every ₦5 of revenue generated, after product costs.
 
-2. *Product41 is the single top-performing product* with 23K in sales value - significantly ahead of other products, making it the most critical item for stock availability.
+2. **Product41 is the single top-performing product** with 23K in sales value - significantly ahead of other products, making it the most critical item for stock availability.
 
-3. *January recorded the highest monthly sales*, peaking near 50K, suggesting a strong start-of-year trading period that could be leveraged for future promotions.
+3. **January recorded the highest monthly sales**, peaking near 50K, suggesting a strong start-of-year trading period that could be leveraged for future promotions.
 
-4. *Daily sales show recurring peaks around the 10th, 20th, and 30th of each month* - likely aligned with salary payment cycles or restocking patterns.
+4. **Daily sales show recurring peaks around the 10th, 20th, and 30th of each month** - likely aligned with salary payment cycles or restocking patterns.
 
-5. *Online and Direct Sales dominate the sales channel mix*, together accounting for over 85% of transactions, with Wholesaler contributing a smaller share.
+5. **Online and Direct Sales dominate the sales channel mix**, together accounting for over 85% of transactions, with Wholesaler contributing a smaller share.
 
-6. *Payment is evenly split between Cash and Online (50/50)* - indicating customers have no strong preference for one payment method over the other.
+6. **Payment is evenly split between Cash and Online (50/50)** - indicating customers have no strong preference for one payment method over the other.
 
-7. *Category04 and Category02 are the top two performing categories*, together making up the majority of category-level revenue.
+7. **Category04 and Category02 are the top two performing categories**, together making up the majority of category-level revenue.
 
 ---
 
-## 10. Recommendations
+## 9. Recommendations
 
 | Priority | Recommendation | Based On | Suggested Owner |
 |----------|---------------|----------|-----------------|
@@ -195,6 +197,18 @@
 | Low | Introduce category-level targets for Category04 and Category02 to sustain their leading performance and identify growth opportunities | Insight 7 -  These two categories together      make up the majority of category revenue | Category Management team |
 ---
 
+
+---
+
+## 10. Deliverables
+
+| Deliverable | Description | Location |
+|-------------|-------------|----------|
+| Power BI Dashboard | Interactive sales dashboard with KPI cards, slicers, and charts covering revenue, profit, products, categories, and trends | visuals/Super_Mart_Sales_Dashboard.png |
+| Summary Report | Written Word document summarizing findings, insights, and recommendations | reports/Super_Mart_Sales_Dashboard_Summary_Report.docx |
+| Raw Data | Original Excel file containing Input Data and Master Data sheets | data/raw/supermart-practice-file.xlsx |
+
+---
 ## 11. Assumptions & Limitations
 
 ### Assumptions
@@ -207,22 +221,9 @@
 - Product and category names are generic (Product41, Category02) - real product names were not available, limiting business-specific interpretation of findings
 - No regional or store-level data was available - all analysis is at the overall business level only
 - The data covers only 2021–2022 - longer-term trends beyond this period cannot be determined
-
-> The goal here is pre-emptive Q&A. A thoughtful reviewer might ask: "Did you account for price changes?" - this section answers before they ask.
-
+  
 ---
-
-## 12. Deliverables
-
-| Deliverable | Description | Location |
-|-------------|-------------|----------|
-| Power BI Dashboard | Interactive sales dashboard with KPI cards, slicers, and charts covering revenue, profit, products, categories, and trends | visuals/Super_Mart_Sales_Dashboard.png |
-| Summary Report | Written Word document summarizing findings, insights, and recommendations | reports/Super_Mart_Sales_Dashboard_Summary_Report.docx |
-| Raw Data | Original Excel file containing Input Data and Master Data sheets | data/raw/supermart-practice-file.xlsx |
-
----
-
-## 13. Author
+## 12. Author
 
 **Vivian Okwara**
 Data Analyst | Lagos, Nigeria
