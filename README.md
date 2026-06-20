@@ -22,8 +22,8 @@
 4. [Repository Structure](#4-repository-structure)
 5. [Data Preparation](#5-data-preparation)
 6. [Analysis & Metrics](#6-analysis--metrics)
-7. [Key Insights](#7-key-insights)
-8. [Recommendations](#8-recommendations)
+7. [Recommendations](#7-recommendations)
+8. [Key Insights](#8-key-insights)
 9. [Deliverables](#9-deliverables)
 10. [Author](#10-author)
 
@@ -71,7 +71,6 @@
 | Visualization | Power BI (KPIs Cards, Bar Charts, Lines Charts, Donut Charts, Treemap, Slicers) |
 | Documentation | Microsoft Word, GitHUb |
 
-
 ---
 
 ## 4. Repository Structure
@@ -100,6 +99,9 @@
 5. **Analysis:** Sales performance was analyzed across time periods, product categories, sale types, payment modes, and individual products using interactive slicers and visualizations.
 6. **Output:** Interactive Power BI dashboard, written summary report (Word document), and project documentation uploaded to GitHub.
 
+---
+## 6.  Data Descripition 
+
 ### Dataset / Table: Input Data
 
 | Field Name | Data Type | Description | Example Value |
@@ -117,8 +119,6 @@
 > **Row count (approx.):** Multiple transaction records across 2021–2022
 > **Date range:**January 2021 – December 2022
 > **Key join / relationship:** `Input Data.Product ID ` → `Master Data.Product ID`
-
----
 
 ### Dataset / Table: Master Data
 
@@ -212,7 +212,7 @@
 
 ---
 
-## 13. Deliverables
+## 12. Deliverables
 
 | Deliverable | Description | Location |
 |-------------|-------------|----------|
@@ -222,7 +222,7 @@
 
 ---
 
-## 14. Author
+## 13. Author
 
 **Vivian Okwara**
 Data Analyst | Lagos, Nigeria
