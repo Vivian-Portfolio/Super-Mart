@@ -126,12 +126,12 @@
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| Product ID  | String | Unique identifier for each product  | P0015 |
-| Product | String | Product name |  Product15  |
-| Category | String  |Product category grouping|  Category02  |
-| UOM | String | Unit of measure | Ft|
-| Buying Price |  Float | Cost price per unit | 12 |
-| Selling Price | Float | Selling price per unit | 15.72 |
+| `Product ID`  | String | Unique identifier for each product  | P0015 |
+| `Product` | String | Product name |  Product15  |
+| `Category` | String  |Product category grouping|  Category02  |
+| `UOM` | String | Unit of measure | Ft|
+| `Buying Price` |  Float | Cost price per unit | 12 |
+| `Selling Price` | Float | Selling price per unit | 15.72 |
 
 > **Row count (approx.):** 46 product records
 > **Key join / relationship:** `Master Data.Product ID` → `Input Data.Product ID`
@@ -148,7 +148,14 @@
 
 ## 7. Analysis & Metrics
 
-### Analytical Approach
+This project used an *exploratory analysis* approach - examining the data to identify patterns, trends, and performance gaps across products, categories, time periods, and sales channels. No hypothesis was tested in advance; the goal was to let the data reveal what was happening in the business.
+
+### Key Metrics Defined
+
+- *Total Buying Value* = Quantity × Buying Price (Calculated Column in Power BI)
+- *Total Selling Value* = Quantity × Selling Price (Calculated Column in Power BI)
+- *Profit* = Total Selling Value − Total Buying Value (DAX Measure)
+- *Profit %* = (Profit ÷ Total Selling Value) × 100 (DAX Measure)
 
 | Metric | Plain-Language Definition | Why It Matters |
 |--------|--------------------------|----------------|
@@ -159,8 +166,7 @@
 | Top Category | Highest selling category by value | Identifies the strongest product group |
 
 ### Methods Used
-
-- Descriptive statistics - total sales, profit, and profit margin across the full dataset
+- Descriptive statistics — total sales, profit, and profit margin across the full dataset
 - Trend analysis across months and days to identify peak and low trading periods
 - Segmentation and group comparison by product, category, sale type, and payment mode
 - Custom aggregation using DAX measures in Power BI (Profit and Profit %)
