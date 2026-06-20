@@ -166,7 +166,7 @@ This project used an *exploratory analysis* approach - examining the data to ide
 | Top Category | Highest selling category by value | Identifies the strongest product group |
 
 ### Methods Used
-- Descriptive statistics — total sales, profit, and profit margin across the full dataset
+- Descriptive statistics - total sales, profit, and profit margin across the full dataset
 - Trend analysis across months and days to identify peak and low trading periods
 - Segmentation and group comparison by product, category, sale type, and payment mode
 - Custom aggregation using DAX measures in Power BI (Profit and Profit %)
