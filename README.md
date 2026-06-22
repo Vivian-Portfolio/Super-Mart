@@ -114,7 +114,7 @@
 | `Sale Type` | String | Channel of sale | Direct Sales |
 | `Payment Mode` | String | Method of payment used  | Online |
 | `Discount %` | Float | Discount applied to the transaction  | 0.0% |
-| `Day | Integer`| Day extracted from date (Power Query)| 1 |
+| `Day` | Integer`| Day extracted from date (Power Query)| 1 |
 | `Month` | String |  Month extracted from date (Power Query)  |  January  |
 | `Year` | Integer  | Year extracted from date (Power Query)  | 2021 |
 
