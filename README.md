@@ -201,8 +201,6 @@ This project used an *exploratory analysis* approach - examining the data to ide
 | Medium | Schedule restocking and staffing around the 10th, 20th, and 30th of each month to meet recurring demand peaks | Insight 4 - Daily sales show consistent peaks around these dates | Operations team |
 | Medium | Investigate whether the Wholesaler channel can be expanded, given that Online and Direct Sales currently dominate over 85% of transactions | Insight 5 - Wholesaler contributes a   smaller share of total transactions | Sales / Business Development team |
 | Low | Introduce category-level targets for Category04 and Category02 to sustain their leading performance and identify growth opportunities | Insight 7 -  These two categories together      make up the majority of category revenue | Category Management team |
----
-
 
 ---
 
