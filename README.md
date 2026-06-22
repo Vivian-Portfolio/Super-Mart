@@ -108,15 +108,15 @@
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| Date | Date| Date of the sales transaction | 01/01/2021 |
-| Product ID | String | Unique identifier for each product | P0024 |
-| Quantity |Integer | Number of units sold per transaction| 9 |
-| Sale Type | String | Channel of sale | Direct Sales |
-| Payment Mode | String | Method of payment used  | Online |
-| Discount % | Float | Discount applied to the transaction  | 0.0% |
-| Day | Integer| Day extracted from date (Power Query)| 1 |
-| Month | String |  Month extracted from date (Power Query)  |  January  |
-| Year | Integer  | Year extracted from date (Power Query)  | 2021 |
+| `Date` | Date| Date of the sales transaction | 01/01/2021 |
+| `Product ID` | String | Unique identifier for each product | P0024 |
+| `Quantity` |Integer | Number of units sold per transaction| 9 |
+| `Sale Type` | String | Channel of sale | Direct Sales |
+| `Payment Mode` | String | Method of payment used  | Online |
+| `Discount %` | Float | Discount applied to the transaction  | 0.0% |
+| `Day | Integer`| Day extracted from date (Power Query)| 1 |
+| `Month` | String |  Month extracted from date (Power Query)  |  January  |
+| `Year` | Integer  | Year extracted from date (Power Query)  | 2021 |
 
 > **Row count (approx.):** Multiple transaction records across 2021–2022
 > **Date range:**January 2021 – December 2022
